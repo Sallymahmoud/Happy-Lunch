@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <title>Happy Lunch</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/logo.svg">
+  <meta name="theme-color" content="#CFF7EA">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img class="logo" src="assets/logo.svg" alt="Happy Lunch logo">
+        <div>
+          <div class="t1">Happy Lunch</div>
+          <div class="t2">Healthy. Fun. Fresh.</div>
+        </div>
+      </div>
+      <button id="installBtn" class="ghost small" aria-label="Install">Install</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h3>Child</h3>
+      <input id="childName" type="text" placeholder="e.g. Ahmed" autocomplete="name"/>
+    </div>
+
+    <!-- Sandwich -->
+    <section class="card">
+      <div class="section-toggle">
+        <input type="checkbox" id="boxSandwich">
+        <label for="boxSandwich">🥪 Sandwich Box</label>
+        <div class="price">SAR 15</div>
+      </div>
+      <div class="dropdown" id="dropSandwich" aria-hidden="true">
+        <div class="kicker">Choose bread and filling</div>
+        <label>Bread Type</label>
+        <div class="options" id="breadOptions">
+          <label class="check"><input type="checkbox" value="Milk Bread"> <span>Milk Bread</span></label>
+          <label class="check"><input type="checkbox" value="French Bread"> <span>French Bread</span></label>
+          <label class="check"><input type="checkbox" value="Brown Bread"> <span>Brown Bread</span></label>
+          <label class="check"><input type="checkbox" value="Whole Wheat Bread"> <span>Whole Wheat Bread</span></label>
+        </div>
+        <label>Filling</label>
+        <div class="options" id="fillingOptions">
+          <label class="check"><input type="checkbox" value="Labneh"> <span>Labneh</span></label>
+          <label class="check"><input type="checkbox" value="Labneh with Thyme"> <span>Labneh with Thyme</span></label>
+          <label class="check"><input type="checkbox" value="Turkey"> <span>Turkey</span></label>
+          <label class="check"><input type="checkbox" value="Turkey with Cheddar"> <span>Turkey with Cheddar</span></label>
+          <label class="check"><input type="checkbox" value="Cheddar"> <span>Cheddar</span></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pasta -->
+    <section class="card">
+      <div class="section-toggle">
+        <input type="checkbox" id="boxPasta">
+        <label for="boxPasta">🍝 Pasta Box</label>
+        <div class="price">SAR 15</div>
+      </div>
+      <div class="dropdown" id="dropPasta" aria-hidden="true">
+        <div class="kicker">Choose pasta, sauce & toppings</div>
+        <label>Pasta Type</label>
+        <div class="options">
+          <label class="check"><input type="checkbox" value="Penne"> Penne</label>
+          <label class="check"><input type="checkbox" value="Fusilli"> Fusilli</label>
+          <label class="check"><input type="checkbox" value="Spaghetti"> Spaghetti</label>
+          <label class="check"><input type="checkbox" value="Macaroni"> Macaroni</label>
+        </div>
+        <label>Sauce</label>
+        <div class="options">
+          <label class="check"><input type="checkbox" value="Tomato"> Tomato</label>
+          <label class="check"><input type="checkbox" value="White Sauce"> White Sauce</label>
+          <label class="check"><input type="checkbox" value="Pesto"> Pesto</label>
+          <label class="check"><input type="checkbox" value="Cheesy Sauce"> Cheesy Sauce</label>
+        </div>
+        <label>Toppings</label>
+        <div class="options">
+          <label class="check"><input type="checkbox" value="Grilled Chicken"> Grilled Chicken</label>
+          <label class="check"><input type="checkbox" value="Vegetables"> Vegetables</label>
+          <label class="check"><input type="checkbox" value="Turkey Bits"> Turkey Bits</label>
+          <label class="check"><input type="checkbox" value="Mozzarella"> Mozzarella</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protein -->
+    <section class="card">
+      <div class="section-toggle">
+        <input type="checkbox" id="boxProtein">
+        <label for="boxProtein">🍗 Protein Box</label>
+        <div class="price">SAR 15</div>
+      </div>
+      <div class="dropdown" id="dropProtein" aria-hidden="true">
+        <div class="kicker">Choose protein & side</div>
+        <label>Protein Type</label>
+        <div class="options">
+          <label class="check"><input type="checkbox" value="Grilled Chicken"> Grilled Chicken</label>
+          <label class="check"><input type="checkbox" value="Mini Beef Burger"> Mini Beef Burger</label>
+          <label class="check"><input type="checkbox" value="Fish Fingers"> Fish Fingers</label>
+          <label class="check"><input type="checkbox" value="Boiled Eggs"> Boiled Eggs</label>
+        </div>
+        <label>Side</label>
+        <div class="options">
+          <label class="check"><input type="checkbox" value="Mashed Potato"> Mashed Potato</label>
+          <label class="check"><input type="checkbox" value="White Rice"> White Rice</label>
+          <label class="check"><input type="checkbox" value="Brown Rice"> Brown Rice</label>
+          <label class="check"><input type="checkbox" value="Veggie Mix"> Veggie Mix</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fruit -->
+    <section class="card">
+      <div class="section-toggle">
+        <input type="checkbox" id="boxFruit">
+        <label for="boxFruit">🍎 Fruit & Snack Box</label>
+        <div class="price">SAR 15</div>
+      </div>
+      <div class="dropdown" id="dropFruit" aria-hidden="true">
+        <div class="kicker">Choose fruits & snacks</div>
+        <label>Fruits</label>
+        <div class="options">
+          <label class="check"><input type="checkbox" value="Apple Slices"> Apple Slices</label>
+          <label class="check"><input type="checkbox" value="Banana"> Banana</label>
+          <label class="check"><input type="checkbox" value="Grapes"> Grapes</label>
+          <label class="check"><input type="checkbox" value="Mixed Berries"> Mixed Berries</label>
+          <label class="check"><input type="checkbox" value="Orange Segments"> Orange Segments</label>
+        </div>
+        <label>Snacks</label>
+        <div class="options">
+          <label class="check"><input type="checkbox" value="Mini Muffin"> Mini Muffin</label>
+          <label class="check"><input type="checkbox" value="Granola Bar"> Granola Bar</label>
+          <label class="check"><input type="checkbox" value="Crackers"> Crackers</label>
+          <label class="check"><input type="checkbox" value="Popcorn"> Popcorn</label>
+        </div>
+      </div>
+    </section>
+
+    <div class="card">
+      <h3>Allergies / Notes</h3>
+      <textarea id="allergies" rows="3" placeholder="e.g. No nuts"></textarea>
+    </div>
+
+    <div class="card">
+      <h3>Lovely message from Mum (optional)</h3>
+      <input id="message" type="text" maxlength="120" placeholder="Have a happy lunch! 💖">
+    </div>
+
+    <div class="card">
+      <h3>Delivery date & time</h3>
+      <input id="datetime" type="datetime-local">
+    </div>
+
+    <div class="card">
+      <h3>Payment</h3>
+      <label class="pay-method"><input type="radio" name="pay" value="Card" checked> Visa / MasterCard</label>
+      <label class="pay-method"><input type="radio" name="pay" value="ApplePay"> Apple Pay</label>
+      <label class="pay-method"><input type="radio" name="pay" value="COD"> Cash on Delivery</label>
+      <button class="primary" id="confirmBtn">Confirm Order</button>
+      <button class="ghost" id="resetBtn">Reset</button>
+      <div class="kicker" style="margin-top:8px">Estimated total: <strong id="totalPrice">SAR 0.00</strong></div>
+    </div>
+  </main>
+
+  <footer>Built with ❤️ — Happy Lunch</footer>
+</div>
+
+<!-- Confirm -->
+<div class="modal" id="confirmModal" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <h3>Confirm your order</h3>
+    <div id="confirmBody"></div>
+    <div class="row">
+      <button class="ghost" id="editBtn">Edit</button>
+      <button class="primary" id="payNowBtn">Pay / Book</button>
+    </div>
+  </div>
+</div>
+
+<!-- Success -->
+<div class="modal" id="successModal" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <h3>Payment Successful</h3>
+    <div class="badge" id="orderId">Order #HL-0001</div>
+    <p>Thank you! Your Happy Lunch booking is confirmed.</p>
+    <p>Arrival: <strong id="arrivalTime">—</strong></p>
+    <button class="primary" id="doneBtn">Done</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
